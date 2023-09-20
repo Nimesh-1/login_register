@@ -1,30 +1,61 @@
-{% extends 'webapp/base.html' %}
-
 {% load static %}
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>DJANGO Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
 
-{% block content %}
-    
-    <body>
+</head>
 
-        <br>
-        <br>
 
-        <div class="text-center">
+{% block content %}       
+<html lang="en" >
 
-            <h3> WELCOME TO Customer Relationship Management Site </h3>
+<body>
 
-            <br>
 
-            <h5> By Aashirwad Budhathoki </h5>
+<section>
+  <article>
+    <ul class="panels">
+      <li class="panel">
+        <a href="#">
+          <span>
+            Animals            
+          </span>
+        </a>
+        <img src="{% static 'css/wolf.jpg' %}" />
+      </li>
+      <li class="panel">
+        <a href="#">
+          <span>
+            History            
+          </span>
+        </a>
+        <img src="{% static 'css/hitler.jpg' %}" />
+      </li>
+      <li class="panel">
+        <a href="#">
+          <span>
+            Science           
+          </span>
+        </a>
+        <img src="{% static 'css/science.jpg' %}" />
+      </li>
+      <li class="panel">
+        <a href="#">
+          <span>
+            Travel            
+          </span>
+        </a>
+        <img src="{% static 'css/eiffel.jpg' %}" />
+      </li>
+    </ul>
+  </article>
+</section>
 
-            <hr>
-            <br>
-
-            <a class="btn btn-warning" type="button" href="{% url 'register' %}"> Create your account &nbsp; <i class="fa fa-user-plus" aria-hidden="true"></i> </a>
-
-        </div>
-
-    </body>        
-
+</body>
+</html>
+<div class="contain"><button type="submit" backgroundcolor:black><a href="user-logout">LOG OUT</a></button></div>
 
 {% endblock %}
